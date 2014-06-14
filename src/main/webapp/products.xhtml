@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	
+	<ui:define name="content">
+
+<div class="products">
+   <h:form>  
+     <h:dataTable value="#{productBean.allProducts}" var="p">
+      
+      <h:column>
+        #{p.name}
+      </h:column>
+      
+       <h:column>
+        #{p.description}
+      </h:column>
+      
+      <h:column>
+        #{p.price} zł
+      </h:column>
+      
+      
+  
+       <h:column>
+        <h:commandLink value="#{msg.addCart}" action="#{productBean.addCart}"/>
+      </h:column>
+      
+     </h:dataTable>
+   </h:form>
+ </div>
+      
+      
+      
+	</ui:define>
+	
+</ui:composition>

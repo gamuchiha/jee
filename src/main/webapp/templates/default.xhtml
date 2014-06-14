@@ -10,20 +10,37 @@
 </h:head>
 <h:body>
   <h:outputStylesheet library="css" name="default.css" target="body" />
+  
+  <div class="main">
+  
+  
 	<div class="heading">
-	  <ui:insert name="heading">
-       #{msg.mainHeading}
-     </ui:insert>
+			<div id="logo">LOGO ZNANEJ FIRMY</div>
+		
+			 <div class="miniCart">
+				   <ui:insert name="miniCart">
+			          <ui:include src="/views/main/miniCart.xhtml" />
+			         
+			       </ui:insert>
+		     </div>
+
     </div>
+    
 	<div class="menuAndContent">
-	 <div class="menu">
-	   <ui:insert name="menu">
-         <ui:include src="/views/main/menu.xhtml" />
-       </ui:insert>
-      </div>
-	  <div class="content">
-	     <ui:insert name="content" />
-       </div>
+	
+			 <div class="menu">
+			   <ui:insert name="menu">
+		         <ui:include src="/views/main/menu.xhtml" />
+		       </ui:insert>
+		      </div>
+		      
+			  <div class="content">
+			     <ui:insert name="content" />
+		       </div>
+       
 	</div>
+	
+  </div>
+	
 </h:body>
 </html>

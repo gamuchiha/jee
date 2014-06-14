@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/templates/default.xhtml">
+	<ui:define name="content">
+	
+	 <h1>Koszyk</h1>
+	 
+	 <div class="cart">
+	     <h:dataTable value="#{cartBean.cart}" var="c">
+	      
+		      <h:column>
+		        <f:facet name="header">#{msg.productNameLabel}</f:facet>
+		        #{c.name}
+		      </h:column>
+		      
+		      <h:column>
+		        <f:facet name="header">#{msg.productPriceLabel}</f:facet>
+		        #{c.price}
+		      </h:column>
+		      
+		      <h:column>
+		        <f:facet name="header">#{msg.productQuantityLabel}</f:facet>
+		        #{c.quantity}
+		      </h:column>
+		      
+		      <h:column>
+		        <f:facet name="header">#{msg.productTotalLabel}</f:facet>
+		        #{c.total}
+		      </h:column>
+	      
+	     </h:dataTable>
+	    
+	     
+	     
+	</div>
+	
+	
+	</ui:define>
+</ui:composition>
